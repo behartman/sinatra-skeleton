@@ -1,0 +1,63 @@
+<div class="container">
+  <form action="/profile/edit" method="POST">
+    <div class="header">
+      <h2> Edit Profile </h2>
+    </div>
+
+    <div class="sep"></div>
+
+    <div class="inputs">
+      <div class="row">
+        <div class="col-xs-5">
+          <label for="email-address">Email:</label>
+        </div>
+        <div class="col-xs-7">
+          <input type="email" id="email-address" name="email" placeholder="Email address">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-5">
+          <label for="password"> Password: </label>
+        </div>
+        <div class="col-xs-7">
+          <input type="password" id="password" name="password" placeholder="Password">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-5">
+          <label> Gender: </label>
+        </div>
+        <div class="col-xs-7">
+          <label for="male">
+            <input type="radio" name="gender" id="male" value="male"/> Male 
+          </label>
+          <label for="female">
+           <input type="radio" name="gender" id="female" value="female"/> Female
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-5">
+          <label for="first-name"> First Name: </label>
+        </div>
+        <div class="col-xs-7">
+          <input type="text" id="first-name" name="first-name" placeholder="First name">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-5">
+          <label for="last-name"> Last Name: </label>
+        </div>
+        <div class="col-xs-7">
+          <input type="text" id="last-name" name="last-name" placeholder="Last name">
+        </div>
+      </div>
+
+      <button name="save" class="center-block"> Save </button>
+    </div>
+  </form>
+</div>

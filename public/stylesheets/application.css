@@ -1,0 +1,83 @@
+/*http://cssdeck.com/labs/sleek-sign-up*/
+body
+{
+  background-color: #D1EAFF; /* D1D1D1 */
+}
+
+.container
+{
+  width: 450px;
+  max-width: 450px;
+}
+
+div form
+{
+  border: 3px solid #9E79FF; /*58DB65*/
+  border-radius: 5px;
+  background-color: #DFD3FF;  /*BDF0C2*/ 
+  margin: 10px;
+  padding: 5px 10px 15px 10px;
+  box-shadow: 0px 0px 0px 2px rgba(255,255,255,0.4), 0px 4px 20px rgba(0,0,0,0.33);
+}
+
+.center-block
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header
+{
+  margin-bottom: 15px;
+}
+
+.header h2
+{
+  font-family: Helvetica, Arial;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sep
+{
+  height: 1px;
+  background: #E8E8E8;
+  width: auto;
+  margin: 10px ;
+}
+
+.inputs
+{
+  margin-top: 15px;
+}
+
+label
+{
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  font-size: 17px;
+  margin: 5px;
+  margin-left: 25px;
+  text-align: center;
+}
+
+input
+{
+  font-size: 16px;
+  margin: 5px;
+}
+
+button
+{
+  border: 2px solid #8050FD; /* 58DB65 */
+  border-radius: 10px;
+  background-color: #BBA1FF; /* 5FF56E */
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin: 8px;
+  padding: 5px 20px 5px 20px;
+  box-shadow: 0px 5px 5px rgba(000,000,000,0.1), inset 0px 1px 0px rgba(255,255,255,0.5);
+}
