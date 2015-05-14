@@ -21,6 +21,10 @@ get '/signup' do
   erb :signup
 end
 
+get '/pins/new' do
+  erb :new_pin
+end
+
 post '/login' do
   username = params[:login_username]
   password = params[:login_password]
@@ -49,6 +53,12 @@ post '/signup' do
   end
 end
 
-post 'profile' do
+post '/profile' do
+  redirect '/'
+end
+
+post '/pins/create' do
+  description = params[:pin_descr]
+  current_user.pins.create(description: description)
   redirect '/'
 end
