@@ -9,22 +9,34 @@ get '/' do
   erb :index
 end
 
+# login page
 get '/login' do
   erb :login
 end
 
-get '/profile' do
+# edit profile page
+get '/profile/edit' do
+  current_user
   erb :profile
 end
 
+# new user
 get '/signup' do
   erb :signup
 end
 
+# new pin
 get '/pins/new' do
   erb :new_pin
 end
 
+# existing pin
+get '/pins/:id' do
+  @pin = Pin.find(params[:id])
+  erb :pin
+end
+
+# create new session
 post '/login' do
   username = params[:login_username]
   password = params[:login_password]
@@ -38,6 +50,7 @@ post '/login' do
   end
 end
 
+# create new user
 post '/signup' do
   username = params[:signup_username]
   password = params[:signup_password]
@@ -53,12 +66,19 @@ post '/signup' do
   end
 end
 
-post '/profile' do
+# edit user profile
+post '/profile/edit' do
+  username = params[:username]
+  email = params[:email]
+  password = params[:password]
+
+  current_user.update username: username, email: email, password: password
   redirect '/'
 end
 
+# create new pin
 post '/pins/create' do
   description = params[:pin_descr]
-  current_user.pins.create(description: description)
-  redirect '/'
+  new_pin = current_user.pins.create(description: description)
+  redirect '/pins/#{new_pin.id}'
 end
