@@ -91,5 +91,5 @@ end
 post '/pins/create' do
   description = params[:pin_descr]
   new_pin = current_user.pins.create(description: description)
-  redirect '/pins/#{@new_pin.id}'
+  redirect '/pins/#{new_pin.id}'
 end
