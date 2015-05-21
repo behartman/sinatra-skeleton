@@ -4,14 +4,25 @@ helpers do
   end
 end
 
+before do
+  redirect '/login' if !current_user && request.path != '/' && request.path != '/login' && request.path != '/signup'
+end
+
 # Homepage (Root path)
 get '/' do
+  @pins = Pin.all.limit(9)
   erb :index
 end
 
 # login page
 get '/login' do
   erb :login
+end
+
+# logout page
+get '/logout' do
+  session[:user_id] = nil
+  redirect '/login'
 end
 
 # edit profile page

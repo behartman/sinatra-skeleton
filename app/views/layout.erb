@@ -33,8 +33,11 @@
     <ul>
       <li> <a href="/" > Home </a> </li>
       <li> <a href="/login"> Login </a> </li>
-      <li> Edit Profile </li>
-      <li> Logout </li>
+      <% if current_user %>
+        <li> <a href="/profile/edit"> Edit Profile </a> </li>
+        <li> <a href="/logout"> Logout </a> </li>
+        <li> <a href="/pins/new"> Add a Pin </a> </li>
+      <% end %>
     </ul>
   </nav>
   <%= yield %>

@@ -1,1 +1,12 @@
 <h1>Home Page</h1>
+
+<% @pins.each_slice(3) do |slice| %>
+  <div class="row">
+    <% slice.each do |pin| %>
+      <div class="col-md-4 pin">
+        <a href="/pins/<%= pin.id %>">
+          <h2><%= pin.description %></h2></a>
+      </div>
+    <% end %>
+  </div>
+<% end %>
